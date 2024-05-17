@@ -72,6 +72,11 @@ if uploaded_file:
 submit_button = st.button("Generate the Analysis")
 
 if submit_button:
+    
+  if uploaded_file is None:
+    st.error("Please provide a medical image for analysis.")
+  else:
+
     image_data = uploaded_file.getvalue()
 
     image_parts = [
@@ -92,3 +97,4 @@ if submit_button:
     if response:
         st.title("Here is the analysis based on your image: ")
         st.write(response.text)
+st.text("By Mahalakshmi")
