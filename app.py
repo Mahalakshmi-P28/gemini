@@ -2,7 +2,15 @@ import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
 
-from api_key import api_key
+
+
+import os  # Add this to access environment variables
+
+# TEMPORARY: Test if the API_KEY environment variable is accessible
+print("Your API Key is:", os.getenv("API_KEY"))  # Add this line for testing
+
+# Replace the direct import from api_key.py with environment variable usage
+api_key = os.getenv("API_KEY")
 
 genai.configure(api_key=api_key)
 
@@ -55,7 +63,7 @@ Important Notes:
 Please provide me an output respone with these 4 headings Detailed Analysis, Findings Report, Recommonadations and Next steps, Treatment Suggestions
 """
 
-model = genai.GenerativeModel(model_name="gemini-pro-vision",
+model = genai.GenerativeModel(model_name="gemini-1.5-flash",
                               generation_config=generation_config,
                               safety_settings=safety_settings)
 
