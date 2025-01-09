@@ -1,15 +1,7 @@
 import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
-
-
-
-import os  # Add this to access environment variables
-
-# TEMPORARY: Test if the API_KEY environment variable is accessible
-print("Your API Key is:", os.getenv("API_KEY"))  # Add this line for testing
-
-# Replace the direct import from api_key.py with environment variable usage
+import os  
 api_key = os.getenv("API_KEY")
 
 genai.configure(api_key=api_key)
@@ -105,4 +97,4 @@ if submit_button:
     if response:
         st.title("Here is the analysis based on your image: ")
         st.write(response.text)
-st.text("By Mahalakshmi")
+st.markdown("**Developed by [Mahalakshmi](#)** ❤️**")
