@@ -16,6 +16,15 @@ A Streamlit app for medical image analysis using Google Generative AI.
 - Streamlit
 - Google Generative AI API Key
 
+##Technoligies
+- Python
+- Streamlit
+- Gemini API Integration
+
+## Live Demo
+Check out the live deployment of the Movie Recommendation System here:  
+🔗 [Live Demo - Vital Image Analysis]https://mahalakshmi-p28-gemini-app-hp7u6b.streamlit.app/
+
 ## Installation
 1. **Clone the repository:**
    ```bash
